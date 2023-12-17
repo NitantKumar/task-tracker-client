@@ -2,14 +2,14 @@
   <div>
     <div v-for="task in tasks" :key="task.id" class="completed-task">
       <div
-        style="padding: 20px; border: 1px solid black"
+        class="border-2 border-solid border-gray-300 p-5"
         @dblclick="UpdateTask(task._id)"
         v-if="type === 'completed' && task.status"
       >
         {{ task.name }}
       </div>
       <div
-        style="padding: 20px; border: 1px solid black"
+      class="border-2 border-solid border-gray-300 p-5"
         @dblclick="UpdateTask(task._id)"
         v-else-if="type === 'not-completed' && !task.status"
       >

@@ -1,10 +1,16 @@
 <template>
-  <div>
-    <h3>Sign In</h3>
+  <div class="my-40">
+    <h3 class="mb-5">Sign In</h3>
     <form @submit.prevent="submit">
-      <input v-model="data.email" type="email" placeholder="email" />
-      <input v-model="data.password" type="password" placeholder="password" />
-      <button type="submit">Submit</button>
+      <div class="my-5">
+        <label for="" class="mx-3">Email: </label>
+        <input v-model="data.email" type="email" placeholder="email" class="border-solid border-2 border-gray-500 "/>
+      </div>
+      <div class="my-5">
+        <label for="" class="mx-3">Password:</label>
+        <input v-model="data.password" type="password" placeholder="password" class="border-solid border-2 border-gray-500 "/>
+      </div>
+      <button type="submit" class="border-solid border-2 border-gray-500 px-2 py-1">Submit</button>
     </form>
   </div>
 </template>

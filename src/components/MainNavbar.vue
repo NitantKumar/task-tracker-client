@@ -1,9 +1,9 @@
 <template>
-  <nav>
+  <nav class="p-5">
     <router-link to="/">Home</router-link>
     <div>
-      <router-link v-if="!isAuthenticated" to="/signin">SignIn</router-link>
-      <router-link v-if="!isAuthenticated" to="/signup">SignUp</router-link>
+      <router-link v-if="!isAuthenticated" to="/signin" class="mx-5">SignIn</router-link>
+      <router-link v-if="!isAuthenticated" to="/signup" class="">SignUp</router-link>
       <router-link @click="handleLogout" v-if="isAuthenticated" to="/signin">Logout</router-link>
     </div>
   </nav>

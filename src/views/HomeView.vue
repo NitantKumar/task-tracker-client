@@ -1,14 +1,18 @@
 <template>
   <div>
-    <h3>Task Tracker</h3>
+    <h3 class="my-2 border-t-2 border-solid border-black py-5">Task Tracker</h3>
     <AddTask v-if="isAuthenticated" />
     <div id="tasks" v-if="isAuthenticated">
-      <h4>Task Yet to be completed</h4>
-      <TaskRender :tasks="completedTask" type="not-completed" />
-      <h4>Task completed</h4>
-      <TaskRender :tasks="completedTask" type="completed" />
+      <div >
+        <h4 class="py-3">Task Yet to be completed</h4>
+        <TaskRender :tasks="completedTask" type="not-completed" class=""/>
+      </div>
+      <div class="border-2 border-solid border-black">
+        <h4 class="py-3">Task completed</h4>
+        <TaskRender :tasks="completedTask" type="completed" />
+      </div>
     </div>
-    <div v-else>
+    <div v-else class="my-20">
       You are not logged In
     </div>
   </div>
